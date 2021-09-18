@@ -30,6 +30,10 @@
   align-items: center;
 }
 
+.h2 {
+  justify-content: center;
+}
+
 .footer a {
   display: flex;
   justify-content: center;

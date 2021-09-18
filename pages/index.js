@@ -1,7 +1,10 @@
 import styles from "../styles/Home.module.css";
 import Select from "react-select";
 import { useState } from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel} from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import React from "react";
+import Image from 'next/image'
 
 export default function Home() {
   const [company, setCompany] = useState(false);
@@ -17,15 +20,15 @@ export default function Home() {
         <h1 className={styles.title}>
           Opinion
         </h1>
-        <h2 className={styles.title}>
+        <h2  className = "h2">
           A new way to view companies
         </h2>
-
         <Carousel>
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src = "/public/brands.jpg"
+              src = "/brands.png"
+              alt = "Brands"
             />
             <Carousel.Caption>
               <h3>Innovating the way we perceive brands</h3>
@@ -35,7 +38,8 @@ export default function Home() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src = "/public/graphs.jpeg"
+              src = "/graphs.png"
+              alt = "Change over Time"
             />
             <Carousel.Caption>
               <h3>View changes over time</h3>
@@ -44,8 +48,9 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <img
-            className="d-block w-100"
-              src = "/public/meetings.jpeg"
+              className="d-block w-100"
+              src = "/meeting.png"
+              alt = "Improve Business"
             />
             <Carousel.Caption>
               <h3>aksndo</h3>
