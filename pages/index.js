@@ -9,11 +9,6 @@ import React from "react";
 export default function Home() {
   const [company, setCompany] = useState(false);
 
-  const options = [
-    { value: "Twitter", label: "T witter" },
-    { value: "Pepsi", label: "Pepsi" },
-    { value: "McDonald's", label: "McDonald's" }
-  ];
   return (
     <>
       <main>
@@ -26,7 +21,7 @@ export default function Home() {
         <Carousel>
           <Carousel.Item>
             <img
-              className = {styles.image-size}
+              className = {styles.carousel}
               src = "/brands.png"
               alt = "Brands"
             />
@@ -37,7 +32,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <img
-            className = {styles.image-size}
+            className = {styles.carousel}
               src = "/graphs.png"
               alt = "Change over Time"
             />
@@ -48,19 +43,19 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className = {styles.image-size}
+              className = {styles.carousel}
               src = "/meeting.png"
               alt = "Improve Business"
             />
             <Carousel.Caption>
-              <h3 className = {styles.textColorBlack}>Improve your perception</h3>
-              <p className = {styles.textColorBlack}>Plan strategies around the results</p>
+              <h3 className = {styles.textColorWhite}>Improve your perception</h3>
+              <p className = {styles.textColorWhite}>Plan strategies around the results</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
 
         <div>
-        <Form.Group className={} controlId="keyword" onChange = {() => setCompany()}>
+        <Form.Group className={styles.form} controlId="keyword" onChange = {() => setCompany()}>
           <Form.Label>What would you like to query?</Form.Label>
           <Form.Control type="text"/>
         </Form.Group>
