@@ -8,6 +8,23 @@ import React from "react";
 
 export default function Home() {
   const [value, setValue] = useState("");
+  let sentiment = 0;
+
+  const GETrequest = async () => {
+    const response = await fetch("https://opinion-server.herokuapp.com/" + value);
+    const myJson = await response.json();
+    value = myJson.sentiment_score_v1;
+  }
+  const POSTrequest = async () => {
+    const response = await fetch("https://opinion-server.herokuapp.com/", {
+      method: "POST",
+      body: value,
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    const myJson = await response.json();
+  }
 
   return (
     <>
