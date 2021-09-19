@@ -1,13 +1,13 @@
 import styles from "../styles/Home.module.css";
 import Select from "react-select";
 import { useState } from "react";
-import { Carousel, Form } from "react-bootstrap";
+import { Carousel, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
 
 
 export default function Home() {
-  const [company, setCompany] = useState(false);
+  const [value, setValue] = useState("");
 
   return (
     <>
@@ -54,11 +54,15 @@ export default function Home() {
           </Carousel.Item>
         </Carousel>
 
-        <div>
-        <Form.Group className={styles.form} controlId="keyword" onChange = {() => setCompany()}>
-          <Form.Label>What would you like to query?</Form.Label>
+        <Form.Group className={styles.form} controlId="keyword">
+          <Form.Label className = {styles.formText}>What would you like to query?</Form.Label>
           <Form.Control type="text" placeholder = "Enter your query here"/>
         </Form.Group>
+
+        <div className = {styles.centered}>
+          <Button variant="primary" onClick = {(val) => setValue(val)} className = {styles.button}>
+            Go!
+          </Button>
         </div>
       </main>
     </>
