@@ -1,10 +1,10 @@
 import styles from "../styles/Home.module.css";
 import Select from "react-select";
 import { useState } from "react";
-import { Carousel} from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import { Carousel, Form } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import Image from 'next/image'
+
 
 export default function Home() {
   const [company, setCompany] = useState(false);
@@ -20,51 +20,50 @@ export default function Home() {
         <h1 className={styles.title}>
           Opinion
         </h1>
-        <h2  className = "h2">
+        <h2  className = {styles.h2}>
           A new way to view companies
         </h2>
         <Carousel>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+              className = {styles.image-size}
               src = "/brands.png"
               alt = "Brands"
             />
             <Carousel.Caption>
-              <h3>Innovating the way we perceive brands</h3>
-              <p>Investigate if a brand is viewed positively or negatively.</p>
+              <h3 className = {styles.textColorCrimson}>Innovating the way we perceive brands</h3>
+              <p className = {styles.textColorCrimson}> Investigate if a brand is viewed positively or negatively.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+            className = {styles.image-size}
               src = "/graphs.png"
               alt = "Change over Time"
             />
             <Carousel.Caption>
-              <h3>View changes over time</h3>
-              <p>Get detailed analysis of brand perception over a time period.</p>
+              <h3 className = {styles.textColorBlack}>View changes over time</h3>
+              <p className = {styles.textColorBlack}>Get detailed analysis of brand perception over a time period.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
-              className="d-block w-100"
+              className = {styles.image-size}
               src = "/meeting.png"
               alt = "Improve Business"
             />
             <Carousel.Caption>
-              <h3>aksndo</h3>
-              <p>Plan business strategy around the results</p>
+              <h3 className = {styles.textColorBlack}>Improve your perception</h3>
+              <p className = {styles.textColorBlack}>Plan strategies around the results</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
 
         <div>
-          <Select
-            options = {options}
-            placeholder = "Select a company"
-            onChange = {() => setCompany()}
-          />
+        <Form.Group className={} controlId="keyword" onChange = {() => setCompany()}>
+          <Form.Label>What would you like to query?</Form.Label>
+          <Form.Control type="text"/>
+        </Form.Group>
         </div>
       </main>
     </>
