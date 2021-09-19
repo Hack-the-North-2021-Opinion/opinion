@@ -57,7 +57,7 @@ export default function Home() {
         <div>
         <Form.Group className={styles.form} controlId="keyword" onChange = {() => setCompany()}>
           <Form.Label>What would you like to query?</Form.Label>
-          <Form.Control type="text"/>
+          <Form.Control type="text" placeholder = "Enter your query here"/>
         </Form.Group>
         </div>
       </main>
