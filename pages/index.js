@@ -53,11 +53,10 @@ export default function Home() {
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
-
-        <Form.Group className={styles.form} controlId="keyword">
-          <Form.Label className = {styles.formText}>What would you like to query?</Form.Label>
-          <Form.Control type="text" placeholder = "Enter your query here"/>
-        </Form.Group>
+          <Form.Group className={styles.form} controlId="keyword">
+            <Form.Label className = {styles.formText}>What would you like to query?</Form.Label>
+            <Form.Control type="text" placeholder = "Enter your query here"/>
+          </Form.Group>
 
         <div className = {styles.centered}>
           <Button variant="primary" onClick = {(val) => setValue(val)} className = {styles.button}>
