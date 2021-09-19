@@ -16,9 +16,9 @@ export default function Home() {
           Opinion
         </h1>
         <h2  className = {styles.h2}>
-          A new way to view companies
+          A new way to perceive things
         </h2>
-        <Carousel>
+        <Carousel className = {styles.flexBox}>
           <Carousel.Item>
             <img
               className = {styles.carousel}
@@ -32,7 +32,7 @@ export default function Home() {
           </Carousel.Item>
           <Carousel.Item>
             <img
-            className = {styles.carousel}
+              className = {styles.carousel}
               src = "/graphs.png"
               alt = "Change over Time"
             />

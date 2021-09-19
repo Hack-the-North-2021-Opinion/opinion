@@ -25,10 +25,15 @@
     max-height: 500px;
   }
   .carousel {
-    width:1400px;
-    height:1000px;
+    width: 100%;
+    height: auto;
+    max-height: 1000px;
     justify-content: center;
     text-align: center;
+  }
+
+  .flexBox {
+    display: flex;
   }
 
   .textColorBlack{
